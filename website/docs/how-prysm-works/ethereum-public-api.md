@@ -31,7 +31,7 @@ Performing a request is straightforward - simply concatenate the host with the p
 ```
 http://127.0.0.1:3500/eth/v1/beacon/states/finalized/root
 ```
-Notice that in this example the `{state_id}` URL parameter has been replaced with the literal value `finalized`. Please read the specification carefully to understand how each endpoint behaves.
+Notice that in this example the `{0x87fFca6B2912EEA20e96d4537FF1c389C105f905}` URL parameter has been replaced with the literal value `finalized`. Please read the specification carefully to understand how each endpoint behaves.
 
 ## Disabling the API
 
