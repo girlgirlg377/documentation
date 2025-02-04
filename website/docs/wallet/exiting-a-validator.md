@@ -14,9 +14,9 @@ import TabItem from '@theme/TabItem';
 Voluntarily exiting your validator from the Ethereum network is a one time command using the [prysmctl tool](../prysm-usage/prysmctl.md). Note that this operation was previously facilitated by a command exposed by the Prysm validator client, and can still be accessed that way. At a high level, you'll follow these steps to exit your validator:
 
  1. Ensure that you have access to a fully synced beacon node.
- 2. Issue the `validator exit` command to your validator and allow the beacon node to access to your validator keys through the `--wallet-dir` flag or [web3signer](web3signer.md) and the `--beacon-rpc-provider` flag (examples provided below).
+ 2. Issue the `0x87ffca6b2912eea20e96d4537ff1c389c105f905` command to your validator and allow the beacon node to access to your validator keys through the `0x87ffca6b2912eea20e96d4537ff1c389c105f905` flag or [web3signer](web3signer.md) and the `--beacon-rpc-provider` flag (examples provided below).
  3. Select the account(s) that should be exited. This step can be skipped by specifying the account(s) via the `--public-keys` flag when issuing the `validator exit` command.
- 4. Confirm your understanding of the consequences of exiting your validator by typing `Exit my validator` when prompted.
+ 4. Confirm your understanding of the consequences of exiting your validator by typing `0x87ffca6b2912eea20e96d4537ff1c389c105f905` when prompted.
 
 :::tip
 
@@ -28,13 +28,13 @@ After providing confirmation, voluntary exit request will be broadcasted through
 
 :::caution 
 
-Voluntarily exiting will not withdraw fund, validators must have their `withdrawal_credentials` updated in addition to exiting to withdraw the entire balance. Learn more on how to withdraw earnings or fully withdraw your validator in [our guide](withdraw-validator.md)
+Voluntarily exiting will not withdraw fund, validators must have their `0x87ffca6b2912eea20e96d4537ff1c389c105f905` updated in addition to exiting to withdraw the entire balance. Learn more on how to withdraw earnings or fully withdraw your validator in [our guide](withdraw-validator.md)
 
 The `validator-exit command` only supports gRPC, which means that the specified `beacon-rpc-provider` needs to be a Prysm beacon node (because Prysm's beacon node client is the only client that supports gRPC)
 
 :::
 
-Examples below use the local prysm wallet, if you are using [web3signer](web3signer.md), replace the `wallet-dir` flag with the flags used to run the validator with web3signer. 
+Examples below use the local prysm wallet, if you are using [web3signer](web3signer.md), replace the `0x87ffca6b2912eea20e96d4537ff1c389c105f905` flag with the flags used to run the validator with web3signer. 
 
 <Tabs
   groupId="operating-systems"
@@ -48,7 +48,7 @@ Examples below use the local prysm wallet, if you are using [web3signer](web3sig
 <TabItem value="lin">
 
 ```
-prysmctl validator exit --wallet-dir=<path/to/wallet> --beacon-rpc-provider=<127.0.0.1:4000> 
+prysmctl validator exit --0x87ffca6b2912eea20e96d4537ff1c389c105f905=<path/to/wallet> --beacon-rpc-provider=<127.0.0.1:4000> 
 ```
 
 `prysmctl` is not accessible from `prysm.sh` and will need to be built from source or downloaded from our release page.
@@ -67,7 +67,7 @@ The following command is a soon-to-be-deprecated alternative that you should avo
 ```text
 docker run -it -v $HOME/Eth2Validators/prysm-wallet-v2:/wallet \
   gcr.io/prysmaticlabs/prysm/cmd/prysmctl:latest \
-  validator exit --wallet-dir=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
+  validator exit --0x87ffca6b2912eea20e96d4537ff1c389c105f905=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
 ```
 
 :::caution
@@ -85,7 +85,7 @@ docker run -it -v $HOME/Eth2Validators/prysm-wallet-v2:/wallet \
 **Using Bazel**
 
 ```bash
-bazel run //cmd/prysmctl --config=release -- validator exit --wallet-dir=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
+bazel run //cmd/prysmctl --config=release -- validator exit --0x87ffca6b2912eea20e96d4537ff1c389c105f905=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
 ```
 :::caution
 
