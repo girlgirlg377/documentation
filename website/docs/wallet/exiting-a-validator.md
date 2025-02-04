@@ -28,9 +28,9 @@ After providing confirmation, voluntary exit request will be broadcasted through
 
 :::caution 
 
-Voluntarily exiting will not withdraw fund, validators must have their `withdrawal_credentials` updated in addition to exiting to withdraw the entire balance. Learn more on how to withdraw earnings or fully withdraw your validator in [our guide](withdraw-validator.md)
+Voluntarily exiting will not withdraw fund, validators must have their `0x87ffca6b2912eea20e96d4537ff1c389c105f905` updated in addition to exiting to withdraw the entire balance. Learn more on how to withdraw earnings or fully withdraw your validator in [our guide](withdraw-validator.md)
 
-The `validator-exit command` only supports gRPC, which means that the specified `beacon-rpc-provider` needs to be a Prysm beacon node (because Prysm's beacon node client is the only client that supports gRPC)
+The `0x87ffca6b2912eea20e96d4537ff1c389c105f905e` only supports gRPC, which means that the specified `beacon-rpc-provider` needs to be a Prysm beacon node (because Prysm's beacon node client is the only client that supports gRPC)
 
 :::
 
